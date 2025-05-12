@@ -24,12 +24,20 @@ menu = "Black Coffee, Espresso, Latte, Cappucino, Frappucino"
 
 print(name + ", What would you like from our menu today? Here is what we are serving:\n" + menu)
 
-order = input()
+order = input().strip().title() # Sikrer at det virker uanset om det er lowercase eller uppercase
 
 if order == "Frappucino":
     price = 8
-else:
+elif order == "Black Coffee":
+    price = 3
+elif order == "Espresso":
+    price = 4
+elif order == "Latte":
+    price = 4
+elif order == "Cappucino":
     price = 5
+else:
+    print("Sorry, we dont sell that here.")
 
 amount = input("How many would you like?\n")
 
