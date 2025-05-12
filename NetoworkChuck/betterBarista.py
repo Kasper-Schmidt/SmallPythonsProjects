@@ -33,7 +33,13 @@ elif order == "Black Coffee":
 elif order == "Espresso":
     price = 4
 elif order == "Latte":
-    price = 4
+    cream = input("Would you like Whipped Cream on that?\n")
+    if cream == "Yes":
+        print("We will get you that")
+        price = 6
+    else:
+        print("Okay, No whipped cream for you my friend")
+        price = 4
 elif order == "Cappucino":
     price = 5
 else:
