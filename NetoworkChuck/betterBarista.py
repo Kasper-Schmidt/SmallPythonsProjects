@@ -9,13 +9,14 @@ print("Hello, welcome to Schmidt Coffee!")
 
 name = input("What is your name?\n")
 
-if name == "Ben":
+if name == "Ben" or name == "Patricia" or name == "Loki":
     evil_status = input("Are you evil?\n")
-    if evil_status == "Yes":
-        print("You're not welcome here evil Ben! GET OUT!")
+    good_deeds = int(input("How many good deeds have you done today?\n"))
+    if evil_status == "Yes" and good_deeds < 4:
+        print("You're not welcome here evil " + name + "! GET OUT!")
         exit()
     else:
-        print("So you are one of those good Bens, Come in my friend!")
+        print("So you are one of those good " + name + "s, Come in my friend!")
 
 else:
     print("Hello " + name + ", Thanks you so much for coming in today.\n\n")
